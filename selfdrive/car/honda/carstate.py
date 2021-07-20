@@ -294,7 +294,7 @@ class CarState(CarStateBase):
     self.brake_hold = cp.vl["VSA_STATUS"]["BRAKE_HOLD_ACTIVE"]
 
     if self.CP.carFingerprint in (CAR.CIVIC, CAR.ODYSSEY, CAR.CRV_5G, CAR.ACCORD, CAR.ACCORDH, CAR.CIVIC_BOSCH,
-                                  CAR.CIVIC_BOSCH_DIESEL, CAR.CRV_HYBRID, CAR.INSIGHT, CAR.ACURA_RDX_3G, CAR.CLARITY)):
+                                  CAR.CIVIC_BOSCH_DIESEL, CAR.CRV_HYBRID, CAR.INSIGHT, CAR.ACURA_RDX_3G, CAR.CLARITY):
       self.park_brake = cp.vl["EPB_STATUS"]["EPB_STATE"] != 0
       main_on = cp.vl["SCM_FEEDBACK"]["MAIN_ON"]
     elif self.CP.carFingerprint == CAR.ODYSSEY_CHN:
