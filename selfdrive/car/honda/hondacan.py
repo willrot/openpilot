@@ -28,6 +28,7 @@ def get_cruise_speed_conversion(car_fingerprint: str, is_metric: bool) -> float:
 
 def create_brake_command(packer, apply_brake, pcm_override, pcm_cancel_cmd, fcw, car_fingerprint, stock_brake):
   # TODO: do we loose pressure if we keep pump off for long?
+  pump_on = apply_brake > 0
   brakelights = apply_brake > 0
   brake_rq = apply_brake > 0
   pcm_fault_cmd = False
