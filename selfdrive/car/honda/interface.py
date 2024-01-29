@@ -282,7 +282,7 @@ class CarInterface(CarInterfaceBase):
       else:
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2560], [0, 2560]]
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.8], [0.24]]
-      ret.tireStiffnessFacto = 1.
+      ret.tireStiffnessFactor = 1.
 
     else:
       raise ValueError(f"unsupported car {candidate}")
